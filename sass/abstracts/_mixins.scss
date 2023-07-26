@@ -1,0 +1,36 @@
+@mixin clearfix {
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+// MEDIA QUERY MANAGER
+/*
+
+$breakpoint arguement choices:
+- sm
+- md
+- lg
+- xlg
+
+1em = 16px
+
+*/
+
+
+@mixin respond($breakpoint) {
+    @if $breakpoint == sm {
+        @media (max-width: 37.5em) { @content };  // 600px
+    }
+    @if $breakpoint == md {
+        @media (max-width: 56.25em) { @content };  // 900px
+    }
+    @if $breakpoint == lg {
+        @media (max-width: 75em) { @content };  // 1200px
+    }
+    @if $breakpoint == xlg {
+        @media (min-width: 112.5em) { @content };  // 1800px
+    }
+}

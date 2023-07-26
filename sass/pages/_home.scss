@@ -1,0 +1,190 @@
+.section {
+    width: 100%;
+    display: flex;
+
+    &-text-box {
+        width: 74%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    &-text-content {
+        
+        @include respond(md){
+            padding: 6rem 3rem;
+            width: 100% !important;
+        }
+        
+        padding: 17.7rem 0 17.7rem 3rem;
+    }
+
+
+    &-vertical {
+        @include respond(md){
+            display: none;
+        }
+
+        overflow-x: hidden;
+        width: 26%;
+        position: relative;
+        flex: 1;
+        margin-top: -43.5rem;
+        z-index: 1;
+
+        &::before {
+            position: absolute;
+            content: "";
+            background-image: url(../../assets/photos/accueil/header-vertical.jpg);
+            background-position: center;
+            background-size: cover;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            display: block;
+        }
+        
+    }
+
+    &-services {
+        width: 100%;
+        display: flex;
+
+        &--content {
+            @include respond (md) {
+                width: 100%;
+            }
+
+            width: 60%;
+            padding-bottom: 5rem;
+        }
+
+        &--aside {
+            @include respond (md) {
+                display: none;
+            }
+            width: 40%;
+            overflow-x: hidden;
+           position: relative;
+            flex: 1;
+            z-index: 1;
+
+            &::before {
+                position: absolute;
+                content: "";
+                background-image: url(../../assets/photos/accueil/services-vertical.jpg);
+                background-position: center;
+                background-size: cover;
+                bottom: 0;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                z-index: -1;
+                display: block;
+            }
+        }
+
+    }
+
+    &-offres {
+        @include respond(md) {
+            padding: 6rem 0;
+
+            // * > .row {
+            //     display: grid;
+            // }
+        }
+
+        &--container {
+            @include respond (md) {
+                display: flex;
+            }
+        
+        }
+
+        .rotated-container.col-1-of-5 {
+            @include respond (md) {
+                width: 30% !important;
+            }
+        }
+        padding: 20rem 9rem;
+
+        .heading-secondary--main {
+            &:after {
+                transform: translateX(41%);
+            }
+        }
+
+        .heading-rotated {
+            @include respond (md) {
+                transform: rotate(270deg) translate(-13.5rem, -13.4rem);
+            }
+            transform: rotate(270deg) translate(-13.5rem, -4.4rem);
+            flex: 1;
+            font-size: 2.5rem;
+            width: max-content
+        }
+    }
+
+
+}
+
+.heading-secondary {
+    &--main {
+        max-width: 35rem;
+        padding-bottom: 1rem;
+        position: relative;
+
+        &::after {
+            position: absolute;
+            content: '';
+            width: 70%;
+            bottom: 0;
+            left: 0;
+            border-bottom: 1px solid $color-black;
+        }
+    }
+
+    &--sub {
+        
+        @include respond (md) {
+            padding-left: 0;
+            max-width: 100%;
+            margin-bottom: 3rem;
+        }
+
+        max-width: 62.5rem;
+        padding-left: 3rem;
+    }
+    
+}
+
+.video-content {
+    max-width: 80rem;
+    overflow-x: hidden;
+    position: relative;
+    z-index: 3;
+
+    @include respond (md) {
+        max-width: 100vw;
+    }
+
+
+}
+
+.bg-video {
+    width: fit-content;
+    position: relative;
+
+    .btn {
+
+        @include respond(sm){
+            width: 80%;
+        };
+        position: absolute !important;
+        right: 0;
+        bottom: -5rem;
+        z-index: 4;
+    }
+}

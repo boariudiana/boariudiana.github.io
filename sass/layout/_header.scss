@@ -1,0 +1,87 @@
+.header {
+    background-image:linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url(../assets/photos/accueil/header.jpg);
+    background-size: cover;
+    background-position: top;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: relative;
+
+    @include respond (md) {
+        padding: 0 3rem;
+        max-height: fit-content;
+    }
+
+    &__logo-box {
+        text-align: center;
+        padding-top: $default-font-size;
+    }
+
+    &__logo {
+        @include respond (md) {
+            width: 5.8rem;
+        }
+    }
+
+    &__menu-white {
+        @include respond (md) {
+            top: 2.2rem;
+            left: 3rem;
+            width: 2.2rem;
+            height: 1.8rem;
+        }
+        position: absolute;
+        top: 3.3rem;
+        left: 4.7rem;
+        width: 3rem;
+        height: 2.4rem;
+
+    }
+
+    &__text-box {
+
+        .heading-primary {
+            @include respond(md) {
+                padding-bottom: 3rem;
+            }
+            
+            min-height: 83vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-end;
+            padding-bottom: 9rem;
+
+            &--sub {
+                @include respond(md){
+                    width: 100%;
+                }
+                width: 65%;
+            }
+        }
+    }
+    
+
+    &__sidebar {
+
+        @include respond (md) {
+            height: max-content;
+        }
+        height: 83vh;
+        display: flex;
+        align-items: flex-end;
+
+        .btn.btn--white {
+
+            @include respond (md) {
+                margin-bottom: 3rem;
+                padding: 1rem 3rem;
+            }
+
+            margin-bottom: 9rem;
+            padding: 5.6rem 4.1rem;
+            line-height: 1;
+            font-size: 1.4rem;
+            z-index: 3;
+        }
+    }
+}
+
